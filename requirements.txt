@@ -1,0 +1,5 @@
+libdw
+numpy
+scikit-learn
+kivy
+matplotlib

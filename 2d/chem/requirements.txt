@@ -1,0 +1,9 @@
+jupyterlab
+notebook
+numpy
+scipy
+mayavi
+PyQt5
+traits
+traitsui
+vtk

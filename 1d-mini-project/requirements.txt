@@ -1,0 +1,7 @@
+RPi.GPIO
+imutils
+numpy
+opencv-python
+kivy
+libdw
+pythymiodw
