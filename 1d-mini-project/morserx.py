@@ -142,11 +142,11 @@ def calculate(frame):
 	if 15 <= ledoff <= 16:
 		msg = morse2char.get("".join(chars))
 
-		if msg != None:
+		if msg is not None:
 			final_string.append(msg)
 			rxmsg = "".join(final_string)
 
-		if msg == None:
+		if msg is None:
 			chars = []
 
 		chars = []

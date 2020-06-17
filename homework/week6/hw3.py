@@ -7,7 +7,7 @@ def get_base_counts2(dna):
     total = {'A': 0, 'C': 0, 'G': 0, 'T': 0}
     
     for letter in dna:
-        if letter in total.keys():
+        if letter in total:
             total[letter] += 1
     
     return total

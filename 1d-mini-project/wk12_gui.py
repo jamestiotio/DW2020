@@ -23,7 +23,7 @@ class LedCollection:
         firebase = pyrebase.initialize_app(config)
         self.db = firebase.database()
         state = self.db.child('/state').get().val()
-        if state == None:
+        if state is None:
             self.state = [{'text': 'off', 'state': 'normal'},
                           {'text': 'off', 'state': 'normal'}]
         else:

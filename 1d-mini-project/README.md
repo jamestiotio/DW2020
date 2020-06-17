@@ -13,7 +13,7 @@ Please do take note that these scripts are experimental in nature (definitely no
 
 ## Prerequisites
 1. Install the necessary packages and libraries:
-```
+```console
 sudo pip3 install opencv-python
 sudo pip3 install imutils
 sudo apt install libatlas-base-dev
@@ -24,6 +24,6 @@ sudo apt install libqt4-test
 ```
 
 2. Suppress the OS GUI warning by running `sudo nano /etc/environment` and adding this line to the file:
-```
+```nanorc
 QT_X11_NO_MITSHM=1
 ```

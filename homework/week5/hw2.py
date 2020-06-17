@@ -23,7 +23,7 @@ def initial_month_day(year):
     return output
 
 def display_calendar_modified(year, month):
-    if month == None:
+    if month is None:
         return display_calendar(year)
     
     else:
