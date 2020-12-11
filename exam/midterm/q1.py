@@ -32,6 +32,8 @@ def calculate_price(ytm, face_value, duration):
 def is_dictionary_ok(dict_ref):
     valid_keys = ["price", "duration", "ytm", "face_value"]
 
+    # These nested if-statements are ugly, but necessary to prevent exceptions being thrown (might be due to Python's short-circuiting behavior for Boolean expressions)
+    # Also, putting all of the if-statements in a single line will make it less readable
     if isinstance(dict_ref, collections.abc.Mapping):
         if is_keys_present(valid_keys, dict_ref):
             if all(is_number(value) for value in dict_ref.values()):
