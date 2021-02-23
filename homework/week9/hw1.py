@@ -7,11 +7,11 @@ class CommentsSM(sm.SM):
         if state == 0:
             if inp == "#":
                 return (1, inp)
-            
+
             return (0, None)
-        
+
         elif state == 1:
             if inp == "\n":
                 return (0, None)
-            
+
             return (1, inp)

@@ -5,5 +5,5 @@ def is_prime(n):
                 return False
         else:
             return True
-        
+
     return False

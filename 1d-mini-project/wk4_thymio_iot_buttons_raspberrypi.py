@@ -60,7 +60,7 @@ while True:
         we can address it by putting a short delay between each iteration after a key
         press has been detected.
         '''
-        
+
         for pin in CONTROLS_LIST.keys():
             if GPIO.input(21) == GPIO.HIGH:
                 print("Sending command list...")
@@ -70,5 +70,5 @@ while True:
             elif GPIO.input(pin) == GPIO.HIGH:
                 COMMAND_LIST.append(CONTROLS_LIST.get(pin))
                 print(COMMAND_LIST)
-                
+
         sleep(200/1000)

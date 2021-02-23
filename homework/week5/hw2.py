@@ -25,18 +25,18 @@ def initial_month_day(year):
 def display_calendar_modified(year, month):
     if month is None:
         return display_calendar(year)
-    
+
     else:
         main_output = ""
         month_sublist = construct_cal_month(month, initial_month_day(year)[month - 1], num_days_in_month(month, leap_year(year)))
-        
+
         main_output += month_sublist[0] + "\n"
         main_output += "  S  M  T  W  T  F  S\n"
-        
+
         for week in month_sublist[1:]:
             if week == month_sublist[-1]:
                 main_output += week
             else:
                 main_output += week + "\n"
-            
+
         return main_output

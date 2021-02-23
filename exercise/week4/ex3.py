@@ -7,5 +7,5 @@ def throw_dice(n, nExp):
             if random.randint(1, 6) == 6:
                 sixes += 1
                 break
-    
+
     return round(sixes / nExp, 2)

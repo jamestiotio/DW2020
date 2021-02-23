@@ -11,5 +11,5 @@ def minmax_in_list(ls):
         for j in ls:
             if biggest < j:
                 biggest = j
-        
+
         return (smallest, biggest)

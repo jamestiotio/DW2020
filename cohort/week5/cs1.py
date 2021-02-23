@@ -1,7 +1,7 @@
 import random
 
-craps=set([2,3,12])
-naturals=set([7,11])
+craps = set([2,3,12])
+naturals = set([7,11])
 
 def roll_two_dices():
     return random.randrange(1, 7, 1), random.randrange(1, 7, 1)
@@ -53,4 +53,3 @@ def play_craps():
             elif sumn==point:
                 print_win()
                 return 1   #goal of the game is to keep rolling dice until the sum == points obtained
-   

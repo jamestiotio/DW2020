@@ -8,5 +8,5 @@ def normalize_minmax(data):
         maximum = np.max(data[:, i])
         minimum = np.min(data[:, i])
         data[:, i] = (data[:, i] - minimum) / (maximum - minimum)
-        
+
     return data

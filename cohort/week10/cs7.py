@@ -4,21 +4,21 @@ from sklearn.metrics import confusion_matrix
 from sklearn.model_selection import train_test_split
 
 def get_metrics(actual_targets, predicted_targets, labels):
-    
+
     c_matrix = confusion_matrix(actual_targets, predicted_targets, labels)
-    
+
     correct = 0
     for i in range(len(c_matrix)):
         correct += c_matrix[i][i]
-    
+
     accuracy = round(correct / max(len(actual_targets), len(predicted_targets)), 3)
-    
+
     sensitivity = round(c_matrix[1][1] / sum(c_matrix[1]), 3)
-    
+
     false_positive = round(c_matrix[0][1] / sum(c_matrix[0]), 3)
-    
+
     output = {'confusion matrix': c_matrix, 'total records': max(len(actual_targets), len(predicted_targets)), 'accuracy': accuracy, 'sensitivity': sensitivity, 'false positive rate': false_positive}
-    
+
     return output
 
 def normalize_minmax(data):
@@ -29,7 +29,7 @@ def normalize_minmax(data):
         maximum = np.max(data[:, i])
         minimum = np.min(data[:, i])
         data[:, i] = (data[:, i] - minimum) / (maximum - minimum)
-        
+
     return data
 
 def knn_classifier_full(bunchobject, feature_list, size, seed):
@@ -40,7 +40,7 @@ def knn_classifier_full(bunchobject, feature_list, size, seed):
     data_valid, data_test, target_valid, target_test = train_test_split(data_part2, target_part2, test_size=0.5, random_state=seed)
     acc = []
     metrics = []
-    
+
     for k in range(1, 21):
         clf = neighbors.KNeighborsClassifier(n_neighbors=k)
         clf.fit(data_train, target_train)

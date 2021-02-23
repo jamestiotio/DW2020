@@ -13,5 +13,5 @@ def approx_ode(h,t0,y0,tn):
     t, y = t0, y0
     for t in np.arange(t0, tn, h):
         y += h * f(t, y)
-    
+
     return round(y, 3)

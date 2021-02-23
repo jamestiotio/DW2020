@@ -9,4 +9,3 @@ GPIO.setup(pins, GPIO.OUT)
 
 for i in pins:
 	GPIO.output(i, 0)
-

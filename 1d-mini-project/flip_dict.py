@@ -10,4 +10,3 @@ with open("filename.py", "r+") as f:
          new_data[1] = new_data[1].split("\n")[0]
          flipped_data.append("    " + new_data[1] + ": " + new_data[0] + ",\n")
      f.writelines(flipped_data)
-

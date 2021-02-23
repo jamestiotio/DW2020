@@ -13,13 +13,13 @@ def multiple_linear_regression(bunchobject, x_index, y_index, order, size, seed)
     regr = linear_model.LinearRegression()
     regr.fit(x_train, y_train)
     y_pred = regr.predict(x_test)
-    
+
     error = mean_squared_error(y_test, y_pred)
     r2 = r2_score(y_test, y_pred)
-    
+
     results = {'coefficients': regr.coef_,
                'intercept': regr.intercept_,
                'mean squared error': error,
                'r2 score': r2}
-    
+
     return x_train[:, [x_index]], y_train, x_test[:, [x_index]], y_pred, results

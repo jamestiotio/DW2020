@@ -5,5 +5,5 @@ def diff(p):
             pass
         else:
             result[order - 1] = order * coeff
-            
+
     return result

@@ -7,17 +7,17 @@ class FirstWordSM(sm.SM):
         if state == 0:
             if inp == " " or inp == "\n":
                 return (0, None)
-            
+
             return (1, inp)
-        
+
         elif state == 1:
             if inp == " ":
                 return (2, None)
-            
+
             return (1, inp)
-        
+
         elif state == 2:
             if inp == "\n":
                 return (0, None)
-            
+
             return (2, None)
