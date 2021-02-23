@@ -10,16 +10,16 @@ def initial_month_day(year):
     jan1 = day_of_week_jan1(year)
     prev_first_day = jan1
     num_days = []
-    
+
     output.append(jan1)
-    
+
     for month in range(1, 12):
         num_days.append(num_days_in_month(month, leap_year(year)))
-        
+
     for each_month in num_days:
         prev_first_day = (prev_first_day + each_month) % 7
         output.append(prev_first_day)
-    
+
     return output
 
 def display_calendar_modified(year, month):
