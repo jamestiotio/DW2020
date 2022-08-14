@@ -15,6 +15,7 @@ def day_of_week_jan1(year):
     return x % 7
 
 def num_days_in_month(month_num, leap_year):
+    # return 29 if (leap_year and month_num == 2) else [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31][month_num - 1]
     # return ((1151794505154789279 ^ (leap_year << 5)) >> (5 * (month_num - 1))) & 31
     if month_num == 2:
         if leap_year:
